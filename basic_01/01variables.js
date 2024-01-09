@@ -12,4 +12,4 @@ Hence Let keyword introdced that can made changes in the scope, that make it so 
 
 We can even create a variable without declarations that is not prefarable///
 
-a variable without assignment will prients "undefined"
+a variable without assignment will prients "undefined"*/
