@@ -1,0 +1,52 @@
+JavaScript execution context:
+1. Global execution context 
+2. Function execution context  
+3. Eval execution context
+
+two phases are there in every context:
+1. Memory creation phase 
+2. Execution phase
+_______________________________________________________________________________________
+        let val1=5
+        let val2=10
+        function addNum(num1,num2){
+            tot= num1+num2
+            return tot
+        }
+        let res1=addNum(val1,val2)
+        let res2=addNum(10,2)
+
+Lets perform js execution context for above 15-17 lines of code 
+
+1. Global exe context===> this 
+2. Memory creation phase:
+        val1--undefined
+        val2--undefined
+        addNum- defination
+        res1---undefined
+        res2---undefined
+3. Execution phase:
+            val1<--5
+            val2<--10
+                            creates New variable env
+            addNum------>             +                  
+                           execution thread            ----------->1. Memory creation phase        2. Execution phase
+                                                                        val1--undefined                 val1<--5
+                                                                        val2--undefined                 val2<--10
+                                                                        tot---undefined                 tot <--15  " 15 is sent to global exe context" 
+            res1<--15  
+
+            addNum-------->  creates new variable env + exe thread
+
+
+
+            res2 <--12
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+call stack:
+
+base is set to global exe context
+next one() is executed then taken out , then two() taken out then three()..
+complexity will occur when:
+            one() call two() and two() calls three() function then , they will omitted sequally in LIFO 
+
