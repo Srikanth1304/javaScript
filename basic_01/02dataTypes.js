@@ -21,3 +21,7 @@ object
 typeof null    =>object
 typeof undefined =>undefined
 */
+
+//-------------------------------------------------------
+/* Flasy values: 0,false,-0, Bigint  0n, null, undefined, NaN,"" 
+   Truthy value:"0","false"," ",[],{},function(){}*/
